@@ -1,5 +1,6 @@
 package com.wipro.doconnect.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import com.wipro.doconnect.service.EmailSenderService;
 @Service
 public class EmailSenderServiceImpl implements EmailSenderService {
 	
+	@Autowired
     private final JavaMailSender mailSender;
 
     public EmailSenderServiceImpl(JavaMailSender mailSender) {
@@ -25,5 +27,6 @@ public class EmailSenderServiceImpl implements EmailSenderService {
         simpleMailMessage.setText(message);
 
         this.mailSender.send(simpleMailMessage);
+        System.out.println("Mail sent successful");
     }
 }

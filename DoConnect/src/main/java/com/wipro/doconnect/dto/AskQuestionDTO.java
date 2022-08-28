@@ -1,10 +1,11 @@
 package com.wipro.doconnect.dto;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 //@Data
@@ -20,6 +21,8 @@ public class AskQuestionDTO
 	
 	@NotBlank(message = "Please provide the topic")
 	private String topic;
+	
+	private Date createdDate;
 
 	public Long getUserId() {
 		return userId;
@@ -43,6 +46,14 @@ public class AskQuestionDTO
 
 	public void setTopic(String topic) {
 		this.topic = topic;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 	
 	

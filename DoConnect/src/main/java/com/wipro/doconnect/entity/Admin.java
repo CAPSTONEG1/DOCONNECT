@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-//@Data
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Admin
@@ -44,6 +44,15 @@ public class Admin
 
 	@Column(name = "is_email_active")
 	private Boolean isActive = true;
+	
+	/*
+	 * @Column(name = "admin_token")
+	 * 
+	 * @NotBlank(message = "Token is mandatory") private String token ;
+	 */
+
+
+
 
 	public Long getId() {
 		return id;
@@ -92,7 +101,14 @@ public class Admin
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
 	}
-	
+
+//	public String getToken() {
+//		return token;
+//	}
+//	public void setToken(String token) {
+//		this.token = token;
+//	}
+//	
 	
 
 }

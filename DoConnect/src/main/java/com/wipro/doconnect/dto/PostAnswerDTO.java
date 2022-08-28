@@ -1,5 +1,7 @@
 package com.wipro.doconnect.dto;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -20,6 +22,16 @@ public class PostAnswerDTO
 	
 	@NotBlank(message = "Answer is needed to submit")
 	private String answer;
+	
+	private Date createdDate;
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
 
 	public Long getUserId() {
 		return userId;
