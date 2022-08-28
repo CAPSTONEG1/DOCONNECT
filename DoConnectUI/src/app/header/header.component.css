@@ -1,0 +1,14 @@
+.navbar-brand{
+    font-weight: bold;
+}
+.back{
+    background-color: rgb(235, 219, 176);
+}
+.list{
+    display: contents;
+   border: 1px solid red;
+   background-color: lightgrey;
+   padding: 10px;
+   width: 50px;
+
+}

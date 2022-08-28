@@ -1,0 +1,32 @@
+
+    <input
+  type="search"
+  class="form-control"
+  placeholder="Search"
+  #search
+  (keyup)="getValue(search.value)"
+  aria-label="Search"
+  aria-describedby="addon-wrapping"
+  list="productName"
+  />
+  
+
+  <div *ngIf="isSearched">
+    <button class="btn btn-outline-primary me-2 my-2 shadow"  *ngFor="let question of questions"  id="{{ question.id }}" (click)="sendQuestionToGetAnswer(question.id)">show</button>
+  
+  </div>
+
+  
+
+
+  
+
+
+  
+ 
+ <datalist id="productName" *ngFor="let question of questions">
+   <option value="{{question.question}}"  *ngFor="let question of questions" class="option" id="{{ question.id }}" (click)="sendQuestionToGetAnswer(question.id)"><a>{{question.question}}</a> 
+     
+      </option>
+ </datalist> 
+
