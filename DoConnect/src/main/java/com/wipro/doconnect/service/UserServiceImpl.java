@@ -2,6 +2,7 @@ package com.wipro.doconnect.service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -91,6 +92,7 @@ public class UserServiceImpl implements UserService {
 		question.setQuestion(askQuestionDTO.getQuestion());
 		question.setTopic(askQuestionDTO.getTopic());
 		question.setUser(user);
+		question.setCreatedDate(new Date());
 		questionRepo.save(question);
 		List<Admin> admins = adminRepository.findAll();
 		for (Admin admin : admins)
@@ -111,6 +113,7 @@ public class UserServiceImpl implements UserService {
 		answer.setQuestion(question);
 		answer.setAnswer(postAnswerDTO.getAnswer());
 		answer.setAnswerUser(answerUser);
+		answer.setCreatedDate(new Date());
 
 		answerRepo.save(answer);
 		
@@ -165,7 +168,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Message sendMessage(@Valid Message message) {
-		String url = "http://localhost:9595/chat/sendMessage";
+		String url = "http://localhost:9091/chat/sendMessage";
 		ResponseEntity<Message> responseEntity = restTemplate.postForEntity(url, message, Message.class);
 		Message response = responseEntity.getBody();
 

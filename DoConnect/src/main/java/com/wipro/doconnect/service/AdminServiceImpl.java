@@ -60,8 +60,9 @@ public class AdminServiceImpl implements AdminService
 	public Admin adminRegister(Admin admin)
 	{
 		Admin admin1 = adminRepository.findByEmail(admin.getEmail());
-		if (Objects.isNull(admin1))
-			return adminRepository.save(admin);
+			if (Objects.isNull(admin1))
+				return adminRepository.save(admin);
+			
 
 		throw new AlreadyThere();
 	}
