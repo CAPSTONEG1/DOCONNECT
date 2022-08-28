@@ -1,0 +1,97 @@
+/* .body{
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+}
+.register {
+    width: 30%;
+    margin: auto;
+    border: 1px solid rgb(188, 171, 171);
+    margin-top: 50px;
+    padding: 40px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 500;
+    color: rgb(92, 92, 124);
+    margin-bottom: 30px;
+}
+
+.registerButton {
+    text-align: center;
+}
+
+Button:hover {
+    background-color: rgb(74, 74, 237);
+}
+
+p {
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+.l-bg-orange-dark {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+} */
+.body{
+
+    width: 100%;
+    height: 100%;
+}
+
+.register {
+    
+    /* width: 30%;
+    margin: auto;
+    border: 1px ;
+    margin-top: 50px;
+    padding: 40px; */
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    border: 1px solid rgb(188, 171, 171);
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+h2 {
+    text-align: center;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 500;
+    color: rgb(29, 29, 167);
+    margin-bottom: 30px;
+}
+
+.registerButton{
+    text-align: center;
+    color:white;
+}
+
+/* Button:hover {
+    background-color: rgb(237, 150, 74);
+} */
+
+p {
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+.l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}
+.email {
+    padding: 40px 60px;
+    margin-top: 10px;
+}

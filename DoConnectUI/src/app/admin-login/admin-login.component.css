@@ -1,0 +1,93 @@
+/* .body{
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+    background-image: url("https://cdn.vox-cdn.com/thumbor/I7I0t87KZ-vf_GSWrH118jwl6d0=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23437452/The_Spy_x_Family_Anime_Succeeds_Because_of_Its_Characters_.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.login{
+  width: 30%;
+  margin: auto;
+  border: 1px solid rgb(188, 171, 171);
+  margin-top: 50px;
+  padding: 40px;
+  background-color: white;
+}
+.email{
+    padding: 20px 20px;
+    margin-top: 10px;
+}
+.email h2{
+    text-align: center;
+    /* font-family:'Courier New', Courier, monospace; 
+    font-weight: 500;
+    color: rgb(92, 92, 124);
+    margin-bottom: 20px;
+}
+.loginButton{
+    margin: 0 60px;
+    text-align: center;
+}
+Button:hover{
+    background-color: rgb(74, 74, 237);
+}
+p{
+    text-align: center;
+    margin:30px 0 60px 0;
+}
+a{
+    width: auto;
+} */
+.body {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+}
+
+.login {
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    border: 1px solid rgb(188, 171, 171);
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.email {
+    padding: 40px 60px;
+    margin-top: 10px;
+}
+
+/* .email h2 {
+    text-align: center;
+   /* font-family: 'Courier New', Courier, monospace; */
+    /*font-weight: 500;
+    color: rgb(92, 92, 124);
+    margin-bottom: 20px;
+} */
+
+.loginButton {
+    margin: 0 60px;
+    text-align: center;
+    color: aliceblue;
+}
+
+/* Button:hover {
+    background-color: lightblue;
+} */
+
+p {
+    text-align: center;
+    margin: 30px 0 60px 0;
+}
+
+a {
+    width: auto;
+    color:aliceblue
+}
+.l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}

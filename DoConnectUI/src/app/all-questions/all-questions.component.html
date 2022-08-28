@@ -1,0 +1,87 @@
+<br />
+<nav class="navbar container navbar-light bg-light">
+  <div class="container-fluid">
+    <button (click)="getQuestions('All')" class="btn btn-outline-dark">
+      All
+    </button>
+    <button (click)="getQuestions('Java')" class="btn btn-outline-secondary">
+      Java
+    </button>
+    <button (click)="getQuestions('Python')" class="btn btn-outline-secondary">
+      Python
+    </button>
+    <button (click)="getQuestions('Cloud')" class="btn btn-outline-secondary">
+      Cloud
+    </button>
+    <button (click)="getQuestions('Others')" class="btn btn-outline-secondary">
+      Others
+    </button>
+  </div>
+</nav>
+
+ 
+
+<!-- <div class="my-3">
+  <div class="container text-align:center">
+  
+    <div *ngFor="let question of questions" >
+    
+        <h1>{{ question.question }}</h1>
+        <p>topic:{{ question.topic }}</p> 
+        <p>postedby:{{ question.user.name }}</p>
+      
+
+      
+        <button class="btn my-2 btn-outline-success" id="{{ question.id }}"
+          (click)="sendQuestionToGetAnswer(question.id)">
+          Get Answers
+        </button>
+    </div>
+  </div>
+      
+</div>-->
+<!-- <div class="container">
+    <div  *ngFor="let question of questions" class="item" >
+          <h1>{{ question.question }}</h1>
+          <p>topic:{{ question.topic }}</p> 
+          <p>postedby:{{ question.user.name }}</p>
+          <button class="btn my-2 btn-outline-success" id="{{ question.id }}"
+            (click)="sendQuestionToGetAnswer(question.id)">
+            Get Answers
+          </button>
+        
+  
+        
+          
+      
+        
+    </div> -->
+
+
+<mat-drawer-container class="sideNav">
+  <mat-drawer-content>
+  <div *ngFor="let question of questions">
+  <mat-card class="questions">
+    <mat-card-title>{{ question.question }}</mat-card-title>
+  <mat-card-content>
+    <mat-card-actions>
+      <div>
+        <span class="questionTag"><label>{{ question.topic }}</label></span>
+        <span class="questionTag">Asked By {{ question.user.name }}</span>
+        <span class="questionTag">Answered on{{question.createdDate | date:'MMM d, y, h:mm:ss a'}} </span>
+        <button class="btn my-2 btn-outline-primary float-end" id="{{ question.id }}"
+                  (click)="sendQuestionToGetAnswer(question.id)">
+                  Show answers
+        </button>
+      </div>
+     
+    </mat-card-actions>
+  </mat-card-content>
+ 
+  </mat-card>
+  
+  
+      
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
