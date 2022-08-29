@@ -17,10 +17,14 @@
                 <span class="questionTag"><label>{{ answer.question.topic }}</label></span>
                 <span class="questionTag">Asked By {{ answer.question.user.name }}</span>
                 <span class="questionTag">Answered on{{answer.createdDate | date:'MMM d, y, h:mm:ss a'}} </span>
-                <span class="questionTag">Answered By {{ answer.answerUser.name }}</span>
+                <span class="questionTag" style="background-color: bisque; " >Answered By {{ answer.answerUser.name }}</span>
                 
               </div>
-              <div class="accordion" id="accordionExample1">
+            
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="accordion" id="accordionExample1">
                 <div class="yourAnswer">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -46,9 +50,6 @@
                   </div>
                 </div>
               </div>
-            </mat-card-actions>
-          </mat-card>
-        </div>
       </mat-drawer-content>
     </mat-drawer-container>
   </div>
