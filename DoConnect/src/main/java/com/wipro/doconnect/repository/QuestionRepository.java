@@ -1,3 +1,9 @@
+/*@Author:Chakradhar
+Modified Date:30-08-2022
+Description:Question Repository class to store Question fields.
+*/
+
+
 package com.wipro.doconnect.repository;
 
 import java.util.List;

@@ -1,3 +1,8 @@
+/*@Author:RamyaSri
+Modified Date:30-08-2022
+Description:Entity class of ImageModel which contains image id, name, type of the image. picByte.
+*/
+
 package com.wipro.doconnect.entity;
 
 import javax.persistence.Column;

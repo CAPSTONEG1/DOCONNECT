@@ -1,3 +1,9 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:AdminServiceImpl class which implements the methods of AdminService interface and provide services to perform admin CURD operations.
+*/
+
+
 package com.wipro.doconnect.service;
 
 import java.util.List;
@@ -30,6 +36,15 @@ public class AdminServiceImpl implements AdminService
 	@Autowired
 	private AnswerRepository answerRepository;
 
+
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin login service.
+	Params:email, password
+	ReturnType:Admin
+	Exception:NotFound
+	*/
+
 	@Override
 	public Admin adminLogin(String email, String password)
 	{
@@ -47,6 +62,13 @@ public class AdminServiceImpl implements AdminService
 		return admin;
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin logout service.
+	Params:adminId
+	ReturnType:String
+	Exception:NotFound
+	*/
 	@Override
 	public String adminLogout(Long adminId)
 	{
@@ -56,6 +78,13 @@ public class AdminServiceImpl implements AdminService
 		return "Logged Out";
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin register service.
+	Params:admin
+	ReturnType:Admin
+	Exception:AlreadyThere
+	*/
 	@Override
 	public Admin adminRegister(Admin admin)
 	{
@@ -67,30 +96,58 @@ public class AdminServiceImpl implements AdminService
 		throw new AlreadyThere();
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin getUser service.
+	Params:email
+	ReturnType:User
+	*/
 	@Override
 	public User getUser(String email)
 	{
 		return userRepo.findByEmail(email);
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin getAllUser service.
+	ReturnType:List
+	*/
 	@Override
 	public List<User> getAllUser()
 	{
 		return userRepo.findAll();
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:getting unapproved questions service.
+	ReturnType:List
+	*/
 	@Override
 	public List<Question> getUnApprovedQuestions()
 	{
 		return questionRepository.findByIsApproved();
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:admin login service.
+	ReturnType:List
+	*/
 	@Override
 	public List<Answer> getUnApprovedAnswers()
 	{
 		return answerRepository.findByIsApproved();
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:approve question service.
+	Params:questionId
+	ReturnType:Question
+	Exception:NotFound
+	*/
 	@Override
 	public Question approveQuestion(Long questionId)
 	{
@@ -101,6 +158,13 @@ public class AdminServiceImpl implements AdminService
 		return question;
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:approve answer service.
+	Params:answerId
+	ReturnType:Answer
+	Exception:NotFound
+	*/
 	@Override
 	public Answer approveAnswer(Long answerId)
 	{
@@ -111,6 +175,13 @@ public class AdminServiceImpl implements AdminService
 		return answer;
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:delete question service.
+	Params:questionId
+	ReturnType:ResponseDTO
+	Exception:NotFound
+	*/
 	@Override
 	public ResponseDTO deleteQuestion(Long questionId)
 	{
@@ -122,6 +193,13 @@ public class AdminServiceImpl implements AdminService
 		return responseDTO;
 	}
 
+	/*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:delete answer service.
+	Params:answerId
+	ReturnType:ResponseDTO
+	Exception:NotFound
+	*/
 	@Override
 	public ResponseDTO deleteAnswer(Long answerId)
 	{

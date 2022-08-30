@@ -1,3 +1,9 @@
+/*@Author:RamyaSri
+Modified Date:30-08-2022
+Description:Entity class of answer contains entities like id, answer(which stores the answer query), answerUser(who posted answer), 
+question(question query), isApproved(checks if answer is approved by admin or not), createdDate(answered date).
+*/
+
 package com.wipro.doconnect.entity;
 
 import java.util.Date;

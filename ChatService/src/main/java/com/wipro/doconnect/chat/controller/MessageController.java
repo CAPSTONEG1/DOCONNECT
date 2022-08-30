@@ -1,3 +1,8 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:RestController class for chat services.
+*/
+
 package com.wipro.doconnect.chat.controller;
 
 import java.util.List;

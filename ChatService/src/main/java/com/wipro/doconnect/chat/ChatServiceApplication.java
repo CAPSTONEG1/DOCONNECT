@@ -1,3 +1,9 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:Main class for ChatService.
+*/
+
+
 package com.wipro.doconnect.chat;
 
 import org.springframework.boot.SpringApplication;

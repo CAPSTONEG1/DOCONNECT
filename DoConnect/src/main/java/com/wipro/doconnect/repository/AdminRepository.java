@@ -1,3 +1,8 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:Admin Repository class
+*/
+
 package com.wipro.doconnect.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;

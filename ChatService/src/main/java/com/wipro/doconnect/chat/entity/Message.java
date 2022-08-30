@@ -1,3 +1,8 @@
+/*@Author:RamyaSri
+Modified Date:30-08-2022
+Description:Entity class for message contains message id, message, fromUser.
+*/
+
 package com.wipro.doconnect.chat.entity;
 
 import javax.persistence.Entity;

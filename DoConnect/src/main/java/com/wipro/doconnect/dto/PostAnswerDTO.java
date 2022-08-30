@@ -1,3 +1,8 @@
+/*@Author:Prathamesh
+Modified Date:30-08-2022
+Description:Dto class of postanswer contains attributes like userId, questionId, answer and createdDate.
+*/
+
 package com.wipro.doconnect.dto;
 
 import java.util.Date;

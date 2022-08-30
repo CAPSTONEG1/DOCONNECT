@@ -1,3 +1,8 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:EmailSenderServiceImpl implementation class for interface EmailSenderService.
+*/
+
 package com.wipro.doconnect.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +22,12 @@ public class EmailSenderServiceImpl implements EmailSenderService {
         this.mailSender = mailSender;
     }
 
+    /*@Author:Rajesh
+	Modified Date:30-08-2022
+	Description:sendEmail service.
+	Params:to, subject, message
+	ReturnType:void
+	*/
     @Override
     public void sendEmail(String to, String subject, String message) {
 

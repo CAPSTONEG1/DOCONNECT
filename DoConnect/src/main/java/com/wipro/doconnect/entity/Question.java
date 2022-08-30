@@ -1,3 +1,9 @@
+/*@Author:Sumanth
+Modified Date:30-08-2022
+Description:Entity class of Question contains Question id, question query, 
+user who posted question, topic which the question belongs to, question is approved by admin or not and created date of the question.
+*/
+
 package com.wipro.doconnect.entity;
 
 import java.util.Date;

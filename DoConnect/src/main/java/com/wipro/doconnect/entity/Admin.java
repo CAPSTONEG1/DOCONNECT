@@ -1,3 +1,8 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:Entity class for admin contains entities like id, name, password, email, phoneNumber, isActive.
+*/
+
 package com.wipro.doconnect.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,12 +50,6 @@ public class Admin
 	@Column(name = "is_email_active")
 	private Boolean isActive = true;
 	
-	/*
-	 * @Column(name = "admin_token")
-	 * 
-	 * @NotBlank(message = "Token is mandatory") private String token ;
-	 */
-
 
 
 
@@ -102,13 +101,7 @@ public class Admin
 		this.isActive = isActive;
 	}
 
-//	public String getToken() {
-//		return token;
-//	}
-//	public void setToken(String token) {
-//		this.token = token;
-//	}
-//	
+
 	
 
 }

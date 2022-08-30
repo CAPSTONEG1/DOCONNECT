@@ -1,3 +1,8 @@
+/*@Author:Sumanth
+Modified Date:30-08-2022
+Description:ExceptionHandler class for runtime exception.
+*/
+
 package com.wipro.doconnect.exception;
 
 import org.springframework.http.HttpStatus;

@@ -1,3 +1,8 @@
+/*@Author:Prathamesh
+Modified Date:30-08-2022
+Description:DTO class contains message attributes.
+*/
+
 package com.wipro.doconnect.chat.dto;
 
 import javax.validation.constraints.NotBlank;

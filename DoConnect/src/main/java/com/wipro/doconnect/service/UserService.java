@@ -1,3 +1,9 @@
+/*@Author:Chakradhar
+Modified Date:30-08-2022
+Description:UserService interface which contains abstract methods.
+*/
+
+
 package com.wipro.doconnect.service;
 
 import java.io.IOException;

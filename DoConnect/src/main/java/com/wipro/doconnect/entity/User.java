@@ -1,3 +1,8 @@
+/*@Author:Chakradhar
+Modified Date:30-08-2022
+Description:Entity class for user contains entities like user id, name, password, email, phoneNumber, isActive.
+*/
+
 package com.wipro.doconnect.entity;
 
 import javax.persistence.Column;

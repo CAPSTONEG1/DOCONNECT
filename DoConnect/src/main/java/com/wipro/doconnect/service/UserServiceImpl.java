@@ -1,3 +1,9 @@
+/*@Author:Chakradhar
+Modified Date:30-08-2022
+Description:UserServiceImpl implementation class for interface UserService.
+*/
+
+
 package com.wipro.doconnect.service;
 
 import java.io.ByteArrayOutputStream;
@@ -55,6 +61,13 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:User login service.
+	Params:email, password
+	ReturnType:User
+	Exception:NotFound
+	*/
 	@Override
 	public User userLogin(String email, String password) {
 		User user = userRepo.findByEmail(email);
@@ -69,6 +82,13 @@ public class UserServiceImpl implements UserService {
 		return user;
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:User logout service.
+	Params:userId
+	ReturnType:String
+	Exception:NotFound
+	*/
 	@Override
 	public String userLogout(Long userId) {
 		User user = userRepo.findById(userId).orElseThrow(() -> new NotFound("User Not Found" + userId));
@@ -77,6 +97,13 @@ public class UserServiceImpl implements UserService {
 		return "Logged Out";
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:User registration service.
+	Params:user
+	ReturnType:User
+	Exception:AlreadyThere
+	*/
 	@Override
 	public User userRegister(User user) {
 		User user1 = userRepo.findByEmail(user.getEmail());
@@ -85,6 +112,13 @@ public class UserServiceImpl implements UserService {
 		throw new AlreadyThere();
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:askQuestion service.
+	Params:askQuestionDTO
+	ReturnType:Question
+	Exception:NotFound
+	*/
 	@Override
 	public Question askQuestion(AskQuestionDTO askQuestionDTO) {
 		Question question = new Question();
@@ -102,6 +136,13 @@ public class UserServiceImpl implements UserService {
 		return question;
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:giveanswer service.
+	Params:postAnswerDTO
+	ReturnType:Answer
+	Exception:NotFound
+	*/
 	@Override
 	public Answer giveAnswer(@Valid PostAnswerDTO postAnswerDTO) {
 		Answer answer = new Answer();
@@ -126,11 +167,23 @@ public class UserServiceImpl implements UserService {
 		return answer;
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:get answer service.
+	Params:questionId
+	ReturnType:List
+	*/
 	@Override
 	public List<Answer> getAnswers(Long questionId) {
 		return answerRepo.findByQuestionId(questionId);
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:delete answer service.
+	Params:topic
+	ReturnType:List
+	*/
 	@Override
 	public List<Question> getQuestions(String topic) {
 		if (topic.equalsIgnoreCase("All")) {
@@ -139,6 +192,12 @@ public class UserServiceImpl implements UserService {
 		return questionRepo.findByTopicAndApproved(topic);
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:searchQuestion service.
+	Params:question
+	ReturnType:List
+	*/
 	@Override
 	public List<Question> searchQuestion(String question) {
 		String sqlQuery = "from Question where (question like :question) and isApproved = 1";
@@ -146,6 +205,13 @@ public class UserServiceImpl implements UserService {
 				.getResultList();
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:uploadImage service.
+	Params:file
+	ReturnType:BodyBuilder
+	Exception:IOException
+	*/
 	@Override
 	public BodyBuilder uplaodImage(MultipartFile file) throws IOException {
 		System.out.println("Original Image Byte Size - " + file.getBytes().length);
@@ -155,6 +221,12 @@ public class UserServiceImpl implements UserService {
 		return ResponseEntity.status(HttpStatus.OK);
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:getImage service.
+	Params:imageName
+	ReturnType:ImageModel
+	*/
 	@Override
 	public ImageModel getImage(String imageName) {
 		final Optional<ImageModel> retrievedImage = imageModelRepo.findByName(imageName);
@@ -166,6 +238,12 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:sendMessage service.
+	Params:message
+	ReturnType:Message
+	*/
 	@Override
 	public Message sendMessage(@Valid Message message) {
 		String url = "http://localhost:9091/chat/sendMessage";
@@ -211,6 +289,14 @@ public class UserServiceImpl implements UserService {
 		}
 		return outputStream.toByteArray();
 	}
+	
+	/*@Author:Chakradhar
+	Modified Date:30-08-2022
+	Description:sendMail service.
+	Params:emailId, type
+	ReturnType:Boolean
+	Exception:Failure Sending mail
+	*/
 	public Boolean sendMail(String emailId, String type)
 	{
 		try

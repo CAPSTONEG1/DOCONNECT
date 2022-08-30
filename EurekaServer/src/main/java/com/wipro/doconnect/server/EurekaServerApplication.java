@@ -1,3 +1,8 @@
+/*@Author:Rajesh
+Modified Date:30-08-2022
+Description:Eureka server main class.
+*/
+
 package com.wipro.doconnect.server;
 
 import org.springframework.boot.SpringApplication;

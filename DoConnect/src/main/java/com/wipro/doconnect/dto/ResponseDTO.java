@@ -1,3 +1,8 @@
+/*@Author:Prathamesh
+Modified Date:30-08-2022
+Description:Dto class of Response contains attribute msg.
+*/
+
 package com.wipro.doconnect.dto;
 
 import lombok.AllArgsConstructor;

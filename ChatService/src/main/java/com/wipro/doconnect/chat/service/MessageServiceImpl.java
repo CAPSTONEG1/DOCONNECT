@@ -1,3 +1,8 @@
+/*@Author:Sumanth
+Modified Date:30-08-2022
+Description:MessageServiceImpl implementation class that implements MessageService methods.
+*/
+
 package com.wipro.doconnect.chat.service;
 
 import java.util.ArrayList;
@@ -17,6 +22,12 @@ public class MessageServiceImpl implements MessageService {
 	@Autowired
 	private MessageRepository messageRepository;
 
+	/*@Author:Sumanth
+	Modified Date:30-08-2022
+	Description:sendmessage service.
+	Params:messageDTO
+	ReturnType:MessageDTO
+	*/
 	@Override
 	public MessageDTO sendMessage(@Valid MessageDTO messageDTO) {
 		Message message = new Message();
@@ -30,6 +41,11 @@ public class MessageServiceImpl implements MessageService {
 		return messageDTO;
 	}
 	
+	/*@Author:Sumanth
+	Modified Date:30-08-2022
+	Description:getMessage service.
+	ReturnType:List
+	*/
 	@Override
 	public List<MessageDTO> getMessage() {
 		List<MessageDTO> data = new ArrayList<MessageDTO>();
