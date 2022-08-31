@@ -16,7 +16,6 @@ export class AdminRegisterComponent implements OnInit {
 
     this.admin=this.adminService.giveAdminData()
     if(this.admin.id!==0){
-      alert("Login Required")
       this.router.navigate(['/admin-login'])
     }
   }
@@ -50,7 +49,7 @@ export class AdminRegisterComponent implements OnInit {
 
      this.adminService.adminRegister(this.admin).subscribe((data)=>{
       this.admin=data
-      alert("Admin Added")
+      alert("succesfully registered")
       this.router.navigate(['/admin'])
      },err =>{
       alert("Admin Already Registered, you should login")

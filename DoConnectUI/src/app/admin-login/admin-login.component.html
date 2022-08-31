@@ -1,42 +1,55 @@
 
-<div class="login">
-  <div class="card l-bg-blue-dark" >
 
-
-   
-      <form ngNativeValidate #adminlogin="ngForm" (ngSubmit)="adminLogin(adminlogin.value)">
-       
+    <body>
+      <div class="container">
+       <div class="screen">
+         <div class="screen__content">
+           
+           <form class="login"  ngNativeValidate #adminlogin="ngForm" (ngSubmit)="adminLogin(adminlogin.value)">
           
+       
+             <h2 style="text-align: center; color:blueviolet" >Admin-Login</h2> <br>
+           
+                  
              
-     
-        
-          <div class="email">
-            <h2 style="text-align: center;" >Admin Login</h2> <br>
-          
-            <label for="exampleInputEmail1" class="form-label">Email </label>
-          <input ngModel name="email" type="email" class="form-control" placeholder="abc@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+             <div class="login__field">
+              
+               <i class="login__icon fas fa-user"></i>
+               <input ngModel name="email" type="email" class="login__input" placeholder="Email"id="exampleInputEmail1"  required>
+               
           <br/>
-  
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input ngModel name="password" type="password" class="form-control" placeholder="password" id="exampleInputPassword1" required/> 
-          </div>
-          
-       
-  
-        <div class="loginButton">
-          <button type="submit" class="btn btn-outline-dark" style="color:aliceblue">Login</button>
-        </div>
-      </form>
-      
-      <a routerLink="/admin-register" routerLinkActive="active" ariaCurrentWhenActive="page">
-        <p>New to DoConnect? Register here</p>
-      </a>
-    </div>
-  </div>
-    
-    <li>
-      <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" style="color:blue">
-        <p>If you are our User, Login here</p>
-      </a>
-    </li>
-
+               
+             </div>
+             <div class="login__field">
+               <i class="login__icon fas fa-lock"></i>
+               <input  ngModel name="password" type="password" class="login__input" placeholder="password"  id="exampleInputPassword1" required>
+            
+             </div>
+             <button class="button login__submit">
+               <span class="button__text" type="submit"> Login</span>
+               <i class="button__icon fas fa-chevron-right"></i>
+             </button>				
+           </form>
+     
+           <div class="social-login">
+             <div  >
+               <br><br>
+               <a routerLink="/admin-register" routerLinkActive="active" style="color:whitesmoke">Register as Admin</a><br>
+               <a routerLink="/login" routerLinkActive="active" style="color:whitesmoke">User Login</a>
+               
+               
+               
+              
+             </div>
+           </div>
+         </div>
+         <div class="screen__background">
+           <span class="screen__background__shape screen__background__shape4"></span>
+           <span class="screen__background__shape screen__background__shape3"></span>		
+           <span class="screen__background__shape screen__background__shape2"></span>
+           <span class="screen__background__shape screen__background__shape1"></span>
+         </div>		
+       </div>
+     </div>
+     </body>
+     

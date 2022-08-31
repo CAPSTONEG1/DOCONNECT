@@ -1,6 +1,33 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header *ngIf="user.id ==0  && admin.id==0"></app-header>
+<router-outlet *ngIf="user.id ==0 && admin.id==0"></router-outlet>
 
 
+<!--
+<app-footer-component *ngIf="user.id ==0 && admin.id==0" ></app-footer-component> -->
+<mat-drawer-container *ngIf ="user.id!=0">
+    <mat-drawer mode="side"[opened]="sideBarOpen">
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-uhead  (toggleSidebarForMe)="sideBarToggler()"></app-uhead>
+      <router-outlet></router-outlet>
+      
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  
+  
+  
+  
+  <mat-drawer-container *ngIf ="admin.id!=0">
+    <mat-drawer mode="side"[opened]="sideBarOpen">
+      <app-sidenav1></app-sidenav1>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-ahead  (toggleSidebarForMe)="sideBarToggler()"></app-ahead>
+      <router-outlet></router-outlet>
+      
+    </mat-drawer-content>
+  </mat-drawer-container> 
 
-<app-footer-component></app-footer-component>
+

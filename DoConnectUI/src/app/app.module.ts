@@ -23,6 +23,22 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponentComponent } from './footer/footer-component.component';
 import { SearchComponent } from './search/search.component';
 import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { Sidenav1Component } from './sidenav1/sidenav1.component';
+import { UheadComponent } from './uhead/uhead.component';
+import {MatMenuModule }  from '@angular/material/menu';
+
+import {MatIconModule } from '@angular/material/icon';
+
+import {MatDividerModule} from '@angular/material/divider';
+
+import {MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { UHomeComponent } from './uhome/uhome.component';
+import { AheadComponent } from './ahead/ahead.component';
+import { UnapprovedComponent } from './unapproved/unapproved.component';
+import { ApprovedComponent } from './approved/approved.component';
+import { GetUsersComponent } from './get-users/get-users.component';
 
 
 
@@ -44,6 +60,14 @@ import { HeaderComponent } from './header/header.component';
     FooterComponentComponent,
     SearchComponent,
     HeaderComponent,
+    SidenavComponent,
+    Sidenav1Component,
+    UheadComponent,
+    UHomeComponent,
+    AheadComponent,
+    UnapprovedComponent,
+    ApprovedComponent,
+    GetUsersComponent,
    
     
 
@@ -55,7 +79,12 @@ import { HeaderComponent } from './header/header.component';
     MatSidenavModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDividerModule ,
+    MatListModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

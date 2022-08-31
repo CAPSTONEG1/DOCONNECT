@@ -1,0 +1,29 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">User-List</div>
+    <!-- <div class="page__content shadow p-3 position-relative"> -->
+      <div class="page__content-data position-absolute text-center">
+
+
+<button (click)="getAllUsers()" class="btn my-2 btn-outline-info" type="button" data-bs-toggle="collapse"
+      data-bs-target="#userTable" aria-expanded="false" aria-controls="userTable">
+      show users-list
+    </button>
+    <div *ngIf="userThere" class="collapse" id="userTable">
+      <table class="table table-hover">
+        <tr>
+          <th>Id</th>
+          <th>UserName</th>
+          <th>User Email</th>
+          <th>PhoneNumber</th>
+        </tr>
+
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phoneNumber }}</td>
+        </tr>
+      </table>
+    </div>
+</div>
+</div>

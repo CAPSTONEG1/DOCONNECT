@@ -1,71 +1,19 @@
-.sideNav {
-    margin: 10px;
-    border: 1px solid #555;
-}
-mat-drawer{
-    margin: 10px;
-    padding: 40px;
-}
-.questions {
-    max-width: 800px;
-    margin: 30px;
-}
-#categories{
-    margin-top: 5px;
-    
-}
-h2,
-h6 {
-    margin-left: 30px;
-}
-li{
-    font-size: 20px;
-    font-weight: bold;
-}
-#ask {
-    margin-left: 700px;
-}
 
-.questionTag{
-    background: rgb(133, 145, 177);
-    margin-left: 10px;
-    padding: 5px;
+.page {
     color: white;
-}
-.answer{
-    float: right;
-    margin-right: 8px;
-}
-.yourAnswer{
-    width: 100%;
-    margin-top: 10px;
-}
-  
-.nav-link {
-    color:#555 ;
-    font-size: 14px;
-}
-
-.top-nav {
-
-    margin-top: 20px;
-}
-
-.padding {
-    padding: 15px 0;
-}
-/* .item{
-    width: 25%;
-    padding-bottom: 2%;
-    margin-bottom: 2%;
-    border: 5px outset darkmagenta;
-    text-align: center;
-    background-color: rgb(255, 255, 182); 
-
-}
-.container{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-     
-} */
+    padding: 0 1rem;
+    background: #f1f5f9;}
+  .page__box {
+      min-height: 120px;
+      background: purple;
+      margin: 0 -1rem;
+      font-size: 36px;
+    }
+    
+   
+    .page-data {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .body{background:  linear-gradient(90deg, #C7C5F4, #776BCC);}

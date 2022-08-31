@@ -14,12 +14,16 @@
             </mat-card-content>
             <mat-card-actions>
               <div>
-                <span class="questionTag"><label>{{ answer.question.topic }}</label></span>
+                <span class="questionTag"><label>{{ answer.question.topic }}</label></span><br>
                 <span class="questionTag">Asked By {{ answer.question.user.name }}</span>
                 <span class="questionTag">Answered on{{answer.createdDate | date:'MMM d, y, h:mm:ss a'}} </span>
                 <span class="questionTag">Answered By {{ answer.answerUser.name }}</span>
                 
               </div>
+              <hr>
+          </mat-card-actions>
+        </mat-card>
+        </div>
               <div class="accordion" id="accordionExample1">
                 <div class="yourAnswer">
                   <div class="accordion-item">
@@ -46,9 +50,6 @@
                   </div>
                 </div>
               </div>
-            </mat-card-actions>
-          </mat-card>
-        </div>
       </mat-drawer-content>
     </mat-drawer-container>
   </div>

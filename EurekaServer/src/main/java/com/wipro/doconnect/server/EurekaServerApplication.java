@@ -1,4 +1,4 @@
-/*@Author:Rajesh
+/*@Author:Prathamesh
 Modified Date:30-08-2022
 Description:Eureka server main class.
 */

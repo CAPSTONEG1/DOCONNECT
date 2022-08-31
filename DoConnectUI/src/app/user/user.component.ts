@@ -32,6 +32,11 @@ export class UserComponent implements OnInit {
   questions:Question[] | undefined
   response:any
   user= new User()
+  sideBarOpen = true;
+
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 
 
 

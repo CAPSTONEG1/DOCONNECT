@@ -2,7 +2,7 @@
     font-weight: bold;
 }
 .back{
-    background-color: rgb(235, 219, 176);
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);
 }
 .list{
     display: contents;

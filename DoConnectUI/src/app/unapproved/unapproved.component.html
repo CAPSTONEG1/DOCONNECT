@@ -1,0 +1,47 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Approved Questions</div>
+    <!-- <div class="page__content shadow p-3 position-relative"> -->
+      <div class="page__content-data position-absolute text-center">
+       
+<div class="container">
+  <div class="text-center border border-info shadow p-3 mb-5 bg-white rounded mt-5 ">
+    <button (click)="getUnApprovedQuestions()" class="btn my-2 btn-outline-info " type="button" data-bs-toggle="collapse"
+      data-bs-target="#questionTable" aria-expanded="false" aria-controls="questionTable">
+      UnApproved Questions
+    </button>
+    <br />
+    <div *ngIf="questionThere" class="collapse" id="questionTable">
+      <table class="table">
+        <tr class="table-success table-striped">
+          <th>Id</th>
+          <th>Question</th>
+          <th>Posted By</th>
+          <th>Posted on</th>
+
+          <th>Topic</th>
+          <th>Approve</th>
+          <th>Reject</th>
+        </tr>
+
+        <tr class="table-success table-striped" *ngFor="let question of questions">
+          <td>{{ question.id }}</td>
+          <td>{{ question.question }}</td>
+          <td>{{ question.user.name }}</td>
+          <td>{{question.createdDate | date:'MMM d, y, h:mm:ss a'}}</td>
+          <td>{{ question.topic }}</td>
+          <td>
+          
+            <button class="btn btn-outline-success" id="{{ question }}" (click)="approveQuestion(question.id)">
+              Approve
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-outline-danger" id="{{ question }}" (click)="deleteQuestion(question.id)">
+              Remove
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+      </div>
+  </div>

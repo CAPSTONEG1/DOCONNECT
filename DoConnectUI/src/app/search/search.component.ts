@@ -46,8 +46,15 @@ export class SearchComponent implements OnInit {
     this.router.navigate(['/get-answer'])
     this.isSearched=false
     
+    
 
   }
+  reloadCurrentRoute() {
+    let currentUrl = this.router.url;
+    this.router.navigateByUrl('/search', {skipLocationChange: true}).then(() => {
+        this.router.navigate([currentUrl]);
+    });
+}
 
 
   

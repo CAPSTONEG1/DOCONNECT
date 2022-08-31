@@ -5,14 +5,16 @@
   placeholder="Search"
   #search
   (keyup)="getValue(search.value)"
+  (keyup.enter)="reloadCurrentRoute()"
   aria-label="Search"
   aria-describedby="addon-wrapping"
   list="productName"
+  
   />
   
 
   <div *ngIf="isSearched">
-    <button class="btn btn-outline-primary me-2 my-2 shadow"  *ngFor="let question of questions"  id="{{ question.id }}" (click)="sendQuestionToGetAnswer(question.id)">show</button>
+    <button class="btn btn-outline-primary me-2 my-2 shadow"  *ngFor="let question of questions"  id="{{ question.id }}" (click)="sendQuestionToGetAnswer(question.id)" (keyup.enter)="reloadCurrentRoute()" >{{question.question}}</button>
   
   </div>
 

@@ -11,6 +11,11 @@ import { UserComponent } from './user/user.component';
 import { GetAnswerComponent } from './get-answer/get-answer.component';
 import { ChatComponent } from './chat/chat.component';
 import { HomeComponent } from './home/home.component';
+import { Sidenav1Component } from './sidenav1/sidenav1.component';
+import { UnapprovedComponent } from './unapproved/unapproved.component';
+import { ApprovedComponent } from './approved/approved.component';
+import { GetUsersComponent } from './get-users/get-users.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -25,7 +30,11 @@ const routes: Routes = [
   { path: "user", component: UserComponent },
   { path: "chat", component: ChatComponent },
   { path: "get-answer", component: GetAnswerComponent },
-  {path:"questions",component:AllQuestionsComponent}
+  {path:"questions",component:AllQuestionsComponent},
+  {path:"unapproved",component:UnapprovedComponent},
+  {path:"approved",component:ApprovedComponent},
+  {path:"get-users",component:GetUsersComponent},
+  {path:"search",component:SearchComponent}
 ];
 
 @NgModule({

@@ -35,7 +35,8 @@ export class LoginComponent implements OnInit {
     this.sendUserData(this.user)
     this.router.navigate(['/user'])
   },err =>{
-    alert("UserName or Password Wrong")
+    alert("Invalid credentials")
+    window.location.reload();
   })
 	}
 }

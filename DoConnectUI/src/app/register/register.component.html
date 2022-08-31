@@ -1,54 +1,43 @@
 
-  <div class="register">
-    <div class="card l-bg-blue-dark" >
-      <form ngNativeValidate #userregister="ngForm" (ngSubmit)="userRegister(userregister.value)">
-        <label for="register" class="container">
-          
-        </label><br />
-        <div class="email">
-          <div>
-            <h2 style="color:white">User Register</h2>
-          </div>
-          
-          <div class="row g-3">
-            <div class="col">
-              <input ngModel name="fName" type="text" class="form-control" placeholder="First name" aria-label="First name"
-                required />
-            </div>
-            <div class="col">
-              <input ngModel name="lName" type="text" class="form-control" placeholder="Last name" aria-label="Last name"
-                required />
-            </div>
-          </div>
-          <br />
-          <div class="mb-3">
-            <input ngModel name="email" type="email" class="form-control" id="formGroupExampleInput" placeholder="Email"
-              required />
-          </div>
-          <div class="mb-3">
-            <input ngModel name="password" type="password" class="form-control" id="formGroupExampleInput2"
-              placeholder="Password" required minlength="8" />
-          </div>
-          <div class="mb-3">
-            <input ngModel name="mNumber" type="text" class="form-control" id="formGroupExampleInput2"
-              placeholder=" Mobile Number" required maxlength="10" minlength="10" />
-          </div>
-        
+
+<body>
+  <div class="container">
+   <div class="screen">
+     <div class="screen__content"> 
+      <br><h2 style="text-align: center; color:rgb(122, 30, 158)" >User-Register</h2> <br>
        
-        <div class="registerButton">
-          <button type="submit" class="btn btn-outline-dark me-2" style="color:aliceblue">
-            Register
-          </button>
-          <input class="btn btn-outline-dark" type="reset" value="Reset"  style="color:aliceblue"/>
-        </div>
-        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" style="color:white">
-          <p>Already a member? Login here.</p>
-        </a>
-      </div>
-      
-      </form>
-    
-    
-   
+       <form  ngNativeValidate #userregister="ngForm" (ngSubmit)="userRegister(userregister.value)">
+  
+        <input ngModel name="fName" type="text" class="login__input"  placeholder="First name" required/>
+        <div class="login__field"> <input ngModel name="lName" type="text" class="login__input"  placeholder="Last name" required/></div>
+         <input ngModel name="email" type="email" class="login__input"  placeholder="Email"required />
+         <div class="login__field"><input ngModel name="password" type="password" class="login__input" placeholder="Password" required minlength="8" /></div>
+        <input ngModel name="mNumber" type="text" class="login__input" placeholder=" Mobile Number" required maxlength="10" minlength="10" />
+         <button class="button login__submit">
+           <span class="button__text" type="submit">Sign-up</span>
+           <i class="button__icon fas fa-chevron-right"></i>
+  
+         </button>				
+       </form>
+  
+        <div class="social-login"> 
+         <div  >
+          <br>
+          <br>
+           <a routerLink="/login" routerLinkActive="active" style="color:whitesmoke;text-align: right; ">User- Login</a>
+           
+           
+           
+          
+         </div>
+       </div>
+     </div>
+     <div class="screen__background">
+       <span class="screen__background__shape screen__background__shape4"></span>
+       <span class="screen__background__shape screen__background__shape3"></span>		
+       <span class="screen__background__shape screen__background__shape2"></span>
+       <span class="screen__background__shape screen__background__shape1"></span>
+     </div>		
+    </div> 
   </div>
-</div>
+  </body>

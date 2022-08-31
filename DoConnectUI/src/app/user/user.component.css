@@ -1,8 +1,16 @@
-.welc{
-background-color:cornflowerblue;
-width:auto;}
-.example-spacer {
-    flex: 1 1 auto;
-  }
 
+:host{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+
+}
+mat-drawer{
+  width:260px;
+  background:  linear-gradient(90deg, #C7C5F4, #776BCC);	
+
+}
+mat-drawer-container{
+  height:100%;
+}
 

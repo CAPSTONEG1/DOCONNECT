@@ -22,6 +22,7 @@ export class ChatComponent implements OnInit {
     if (this.user.id == 0) {
       alert("Login Required")
       this.router.navigate(['/login'])
+      window.location.reload();
     }
   }
   messageDTO = new MessageDTO()

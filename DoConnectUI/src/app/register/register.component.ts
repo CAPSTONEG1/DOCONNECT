@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
     this.user.phoneNumber=data.mNumber
 		 this.userService.userRegister(this.user).subscribe((data)=>{
       this.user=data
-      alert("User Added")
+      alert("registered successfuly as user")
       this.router.navigate(['/login'])
      },err =>{
       alert("User Already Registered, you should login")

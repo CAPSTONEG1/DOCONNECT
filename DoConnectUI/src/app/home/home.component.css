@@ -1,7 +1,6 @@
  .body{
     background-color: rgb(250, 250, 250);
-    width: 100%;
-    height: 100%;
+  
     background-image: url("src\assets\images (1).jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,5 +8,9 @@
 }
 /* https://miro.medium.com/max/603/1*1LzDyOaDaDrIDu9hksV35Q.jpeg */
 
-    
+body {
+	/* background: linear-gradient(90deg, #f4c5d0, #776BCC);	 */
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);	
+}
+
 

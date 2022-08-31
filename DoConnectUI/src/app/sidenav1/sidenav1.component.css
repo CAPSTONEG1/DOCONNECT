@@ -1,0 +1,42 @@
+
+  .logo{
+    text-align: center;
+    padding: 2.6rem 1rem;
+}
+.img{
+    
+        width:200px;
+   
+}
+.mat-icon{
+    vertical-align: center;
+    margin-right:1rem;
+}
+.mat-divider{
+    border-top-width:2px;
+    border-color:white;
+}
+.mat-list-item{
+    color: purple !important;
+    font-size: 0.8rem;
+    height: 44px !important;
+    margin-bottom: 4px; 
+}
+.mat-list-item {
+    color: #c11bb6 !important;
+    font-size: 0.8rem;
+    height: 44px !important;
+    margin-bottom: 4px;
+  }
+.mat-list-item:hover{color: #ec0bd9 !important;};
+.mat-list-item::ng-deep:hover{ background: #c313b4 !important;};
+
+.list-item-active:hover{background: rgb(0, 229, 255);};
+.mat-list-active::ng-deep:hover{background: #d812ad !important;};
+
+  .mat-subheader {
+    color: #861c7a;
+    font-size: 0.6rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }

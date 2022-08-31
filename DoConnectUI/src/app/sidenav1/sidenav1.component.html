@@ -1,0 +1,23 @@
+
+<mat-nav-list >
+    <div class="logo py-4">
+        <h1>DOCONNECT</h1>
+        <h4>{{admin.name}}</h4>
+        <mat-divider></mat-divider>
+        
+        <a mat-list-item routerLink="/unapproved" routerLinkActive="list-item-active">
+            <mat-icon>question</mat-icon>
+            UnApproved Questions
+        </a>
+        <a mat-list-item routerLink="/approved" routerLinkActive="list-item-active">
+            <mat-icon>question</mat-icon>
+            UnApproved Answers
+        </a>
+        <a mat-list-item routerLink="/get-users" routerLinkActive="list-item-active">
+            <mat-icon>question</mat-icon>
+            Show Users
+        </a>
+
+        
+    </div>
+</mat-nav-list>
